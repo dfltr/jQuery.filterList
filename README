@@ -1,0 +1,5 @@
+Usage:
+
+$('#yourTextField').filterList('ul#somelist, div#someDivWithChildren', { omit: '.notThisOne' });
+
+Type in #yourTextField et voila, the direct children of #someList and #someDivWithChildren that do not match the selector passed to 'omit' will appear and disappear as if by magic.

@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="jquery.filterList.js"></script>
+</head>
+<body>
+    <input id="filter" type="text" />
+    <br /><br />
+    <ul id="first">
+        <li>alpha</li>
+        <li>beta</li>
+        <li>morons, the</li>
+    </ul>
+
+    <div class="something">
+        <ul id="second">
+            <li>alpha</li>
+            <li>the dudebro</li>
+            <li>terrible things</li>
+            <li class="omit">
+                <ul id="third">
+                    <li>herp</li>
+                    <li>alpha</li>
+                    <li>the derp</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $('#filter').filterList('#first, #second, #third', { omit: '.omit' }).focus();
+    </script>
+</body>
+</html>
